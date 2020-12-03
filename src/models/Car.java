@@ -1,3 +1,5 @@
+package models;
+
 import java.util.Random;
 
 public class Car implements Runnable {
@@ -29,7 +31,7 @@ public class Car implements Runnable {
                 }
             }
             log += "|";
-            System.out.println("Car" + this.name + ": " + log + " " + Math.min(DISTANCE, runDistance) + "KM");
+            System.out.println("models.Car" + this.name + ": " + log + " " + Math.min(DISTANCE, runDistance) + "KM");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -38,6 +40,6 @@ public class Car implements Runnable {
             }
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("Car" + this.name + " Finish in " + (endTime - startTime) / 1000 + "s");
+        System.out.println("models.Car" + this.name + " Finish in " + (endTime - startTime) / 1000 + "s");
     }
 }
